@@ -1,5 +1,5 @@
 ---
-id: creating-a-container
+id: podman-container
 title: "Containers with Podman"
 tags: [podman, jupyter, systemd]
 ---
@@ -63,4 +63,3 @@ If you are deploying a rootless contaner on a system running SELinux, you need t
 Use `--env` or `-e`
 
 Envorimetnal variables is used to configure each container, like user name, passwords, ip of database.
-

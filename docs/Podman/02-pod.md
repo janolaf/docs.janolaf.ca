@@ -1,6 +1,6 @@
 ---
-id: pods-with-podman
-title: "Pods with Podman"
+id: podman-pods
+title: "Pods"
 tags: [podman, pod]
 ---
 

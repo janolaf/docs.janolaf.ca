@@ -1,7 +1,7 @@
 ---
 id: systemd
-title: "Generating service files for pods and containers"
-tags: [podman, systemd, pod ]
+title: "systemd"
+tags: [podman, systemd, pod]
 ---
 
 # Generating systemd service file for containers
