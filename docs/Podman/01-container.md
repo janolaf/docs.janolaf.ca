@@ -1,8 +1,10 @@
 ---
 id: podman-container
-title: "Containers with Podman"
+title: "Containers"
 tags: [podman, jupyter, systemd]
 ---
+
+# Containers with Podman
 
 Podman is a daemonless, rootless, container engine, which is designed to be a drop-in replacement for Docker. As a drop-in replacement for Docker, Podman supports the same commands and syntax.
 

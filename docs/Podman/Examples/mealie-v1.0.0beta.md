@@ -117,12 +117,4 @@ systemctl --user enable pod-mealie
 
 ## Updating Mealie Beta
 
-Right now, there is no :latest tag in the 1.0.0. beta release. Each time Mealie makes a new release available, you are going to have to manually change the containers your pod uses. So far, all it has required is changing `hkotel/mealie:api-v1.0.0beta-4` to `hkotel/mealie:api-v1.0.0beta-5`.
-
-Which is why I maintain a bash shell script. I know I can generate a kubernetes yaml file, but I am more familiar with bash. And there is always the possibility of major, breaking changes, coming down the line.
-
-## Conclusion
-
-I hope this helps podman users with setting up Mealie. Other than a few hickups at the beggining, Mealie is easy to setup and works will under podman.
-
-I look forward to Mealies continued development.
+Right now, there is no :latest tag in the 1.0.0. beta release. Each time Mealie makes a new release available, you will need to manually edit the containers your pod uses. So far, all it has required is changing `hkotel/mealie:api-v1.0.0beta-4` to `hkotel/mealie:api-v1.0.0beta-5` in the shell script.

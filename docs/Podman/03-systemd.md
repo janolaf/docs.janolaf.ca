@@ -4,7 +4,7 @@ title: "systemd"
 tags: [podman, systemd, pod]
 ---
 
-# Generating systemd service file for containers
+# Generating systemd service files
 
 If everything is working as intended, all that is left is to generate the systemd service file, enable it and see if it works.
 
