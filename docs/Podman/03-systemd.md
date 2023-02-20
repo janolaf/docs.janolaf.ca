@@ -6,8 +6,6 @@ tags: [podman, systemd, pod]
 
 # Generating systemd service files
 
-If everything is working as intended, all that is left is to generate the systemd service file, enable it and see if it works.
-
 If it does not already exist, create the systemd user directory in your home directory.
 
 ```bash
@@ -16,11 +14,13 @@ mkdir -p ~/.config/systemd/user
 
 Then generate the systemd service file.
 
+For this example we will generate a service file a container called jupyter-notebook.
+
 ```bash
 podman generate systemd \
 	--user \
 	--new \
-	--name foo \
+	--name jupyter-notebook \
 	-f /home/user/.config/systemd/user/
 ```
 
@@ -35,23 +35,23 @@ Systemctl --user daemon-reload
 Stop the jupyter container.
 
 ```bash
-podman stop foo
+podman stop jupyter-notebook
 ```
 
 Enable and start container-jupyter.service.
 
 ```bash
-Systemctl --user enable --now container-foo.service
+Systemctl --user enable --now container-jupyter-notebook.service
 ```
 
 Check if everything worked
 
 ```bash
-Systemctl --user status container-foo
+Systemctl --user status container-jupyter-notebook
 ```
 
 ```bash
-podman container ps foo
+podman container ps jupyter-notebook
 ```
 
 If you want the container to be accessible when the user is not logged in, you will need to run

@@ -2,7 +2,9 @@
 id: windows-openssh
 title: OpenSSH
 ---
+
 # OpenSSH in Windows
+
 :::caution
 
 This has only been tested with users which have administrative privilege.
@@ -10,7 +12,17 @@ May not work with a standard user.
 
 :::
 
-You can manage ssh keys in Windows 10/11 the same way you do in linux, with the `config` file. The `config` file is stored in `C:\Users\Foo\.ssh\config`. 
+## Create SSH key
+
+```
+ssh-keygen.exe -t ed25519
+```
+
+The default location ssh keys are stored is `C:\User\username\.ssh\`. The directory will be created when you generate your first ssh key.
+
+## Managing mutliple SSH keys
+
+You do not need a third party application, like putty, to manage multiple SSH keys. We can manage SSH keys in Windows 10/11 the same way we do on unix or linux system; using OpenSSH `config` file. The `config` file is stored in `C:\Users\username\.ssh\config`.
 
 :::tip
 
