@@ -2,4 +2,7 @@ node_modules
 .yarn
 build
 .docusaurus
-
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+package-lock.json
