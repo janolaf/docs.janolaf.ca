@@ -1,14 +1,9 @@
 ---
 id: pods-with-podman
 title: "Pods with Podman"
-tags: [ podman, pod, ngnix, ngnix-manager ]
+tags: [podman, pod]
 ---
 
-:::note
-This was written with Podman 3. Podman 4 has some changes that will be documented at a later date
+The real power of podman is through the use of pods. A pod is a group of one or more containers which share the same network, pid and ipc namespace. This means that each container in a pod sees each other as being on localhost.
 
-:::
-
-The real power of Podman is the use of Kubernetes Pods. A Pod is a group of one or more containers. All containers within a pod is treated as the same localhost.
-
-
+We can access all containers from a single port.
