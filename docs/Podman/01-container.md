@@ -62,6 +62,9 @@ If you are deploying a rootless contaner on a system running SELinux, you need t
 
 ## Environment Variables
 
-Use `--env` or `-e`
+Enviromental variables are used to configure application settings within the container, like user name, passwords, ip of database.
 
-Envorimetnal variables is used to configure each container, like user name, passwords, ip of database.
+Use `--env` or `-e` when invoking a enviromental variable.
+
+
+

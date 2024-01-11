@@ -14,7 +14,7 @@ to create a pod
 podman pod create --name mealie --port 8080:80
 ```
 
-This creates a pod named mealie, which can be access from port 8080 on the host.
+This creates a pod named mealie, which can be access from port 8080 on the host. To access the application, you have to publish the port from the pod, not the container.
 
 :::note
 My convention is to name the pod by the application I am trying to run.
