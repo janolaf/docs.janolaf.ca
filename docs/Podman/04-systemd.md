@@ -1,8 +1,11 @@
 ---
 id: systemd
-title: "systemd"
+title: "Generating systemd service files"
 tags: [podman, systemd, pod]
 ---
+:::warning
+generating systemd service files is being deprecitated. It is being replaced with quadlets
+:::
 
 # Generating systemd service files
 
