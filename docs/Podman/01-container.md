@@ -14,7 +14,7 @@ Podman can support Docker Compose files if you install `podman-compose`. Some of
 
 To run a container
 
-```bash
+```sh
 podman container run -d ngnix
 ```
 
@@ -26,7 +26,7 @@ Like Docker, if you need to access the container from a browser, you need to tel
 
 for example if we want to access ngnix from 8080, we would add '-p 8080:80'
 
-```bash
+```sh
 podman container run -d -p 8080:80 ngnix
 ```
 
@@ -36,19 +36,19 @@ Use `-v host-directory:container-directroy` or `--volume host-directory:containe
 
 If not instructed, podman will create a volume with a unique ID. You can point to a already created volume or host directory.
 
-```bash
+```sh
 podman container run -d -v /srv/foo:/foo ngnix
 ```
 
 You can also create a volume
 
-```bash
+```sh
 podman volume create -name foo
 ```
 
 have the container use the volume
 
-```bash
+```sh
 podman container run -d -v foo:/foo ngnix
 ```
 
@@ -65,6 +65,3 @@ If you are deploying a rootless contaner on a system running SELinux, you need t
 Enviromental variables are used to configure application settings within the container, like user name, passwords, ip of database.
 
 Use `--env` or `-e` when invoking a enviromental variable.
-
-
-
