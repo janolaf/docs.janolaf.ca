@@ -30,6 +30,6 @@ Windows will translate `/` to `\` within OpenSSH `config` file.
 
 The unix `~`, which refers to a user home directory, is supported by Windows in OpenSSH `config` file. You can use `~` to refer to a key in a user home directory. This will work in both Powershell and CMD.
 
-Since unix syntax is supported, we can literally copy a `config` from a unix/linux system to a Windows system.
+Since unix syntax is supported, we can copy a `config` from a unix/linux system to a Windows system.
 
 :::
