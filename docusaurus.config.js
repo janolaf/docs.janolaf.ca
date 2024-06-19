@@ -5,7 +5,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Jan-Olaf Guides",
+  title: "My Guides",
   tagline: "Guides and Tutorials",
   favicon: "img/favicon.ico",
 
@@ -90,9 +90,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Jan-Olaf Bakker. Built with Docusaurus.`,
       },
       prism: {
-        theme: prismThemes.github,
+        theme: prismThemes.dracula,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ["lua"],
+        additionalLanguages: ["lua", "bash", "go", "elixir", "systemd"],
       },
     }),
 };
