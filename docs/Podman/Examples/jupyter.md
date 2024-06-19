@@ -1,7 +1,7 @@
 ---
 id: jupyter
 title: "Jupyter Lab"
-tags: [ podman, jupyter, systemd ]
+tags: [podman, jupyter, systemd]
 ---
 
 Podman will automatically create the necessary volume for your image if you do not specify a location.
@@ -16,13 +16,13 @@ podman container run -d \
     jupyter/scipy-notebook
 ```
 
-This is okay, but then we have to get the token from the terminal. You run `podman logs jupyter`, copy the string after `token=`, it is all quite clunky really. 
+This is okay, but then we have to get the token from the terminal. You run `podman logs jupyter`, copy the string after `token=`, it is all quite clunky really.
 
-What we can do is create our own token or disable the token by adding `"start-notebook.sh --NotebookApp.token=''"`  after scipy-notebook. 
+What we can do is create our own token or disable the token by adding `"start-notebook.sh --NotebookApp.token=''"` after scipy-notebook.
 
-If you want to create a token add ``--NotebookApp.token='my_token'``, replacing `my_token` with whatever you like. Much better than a random string of gibberish.
+If you want to create a token add `--NotebookApp.token='my_token'`, replacing `my_token` with whatever you like. Much better than a random string of gibberish.
 
-If systemd is managing the container, and we will be generating a systemd service file, we can auto update the container as well by adding a `'--label io.containers.autoupdate={local,registry}'`. 
+If systemd is managing the container, and we will be generating a systemd service file, we can auto update the container as well by adding a `'--label io.containers.autoupdate={local,registry}'`.
 
 If you want to run JupyterLab, `-e JUPYTER_ENABLE_LAB=yes`.
 
@@ -67,14 +67,14 @@ podman generate systemd \
 	--new \
 	--name jupyter \
 	-f /home/user/.config/systemd/user/
-``` 
+```
 
 This will create container-jupyter.service in `~/.config/systemd/user/`. If you do not use `--name` you will get a service file named `container-dg6464323fsdf34536`...
 
 After creating the service file, reload systemd.
 
 ```bash
-Systemctl --user daemon-reload
+systemctl --user daemon-reload
 ```
 
 Stop the jupyter container.
@@ -86,20 +86,20 @@ podman stop jupyter
 Enable and start container-jupyter.service.
 
 ```bash
-Systemctl --user enable --now container-jupyter.service
+systemctl --user enable --now container-jupyter.service
 ```
 
 Check if everything worked
 
 ```bash
-Systemctl --user status container-jupyter
+systemctl --user status container-jupyter
 ```
 
 ```bash
 podman container ps jupyter
 ```
 
-If you want Jupyter notebook to be accessible when the user is not logged in, you will need to run 
+If you want Jupyter notebook to be accessible when the user is not logged in, you will need to run
 
 ```bash
 loginctl enable-linger user
